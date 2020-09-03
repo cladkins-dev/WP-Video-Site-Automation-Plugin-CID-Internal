@@ -1,0 +1,58 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<style type="text/css">
+  .thumbnail-wrapper{
+    border:2px solid #DFDFDF;
+    min-height:420px;
+    padding:10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+
+</style>
+
+    <div class="container" id="tourpackages-carousel">
+      <div class="row">
+        <div class="col-lg-10"><h1>Plugins <a class="btn icon-btn btn-primary pull-right" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle"></span> Add New Plugin</a></h1>
+
+
+        {% for i in plugins %}
+        <!--OUTER -->
+        <div class="col-sm-6">
+        <div class="card  text-center">
+            <div class="card-header">
+              <h4>{{i.manifest._title}}</h4>
+              <img src="https://via.placeholder.com/150"/>
+
+            </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Version: {{i.manifest._version|number_format(2, '.', ',')}}</h5>
+            <h5 class="card-title">Published by: {{i.manifest._publisher}}</h5>
+            <p class="card-text">{{i.manifest._description}}</p>
+            <!--ShortCode -->
+          <b>Short Code:</b>
+          <pre>[{{i.manifest._shortcode}} mode="active"][/{{i.manifest._shortcode}}]</pre>
+            <div class="row" style="margin-top:20px;">
+               <div class='col-lg-4 col-lg-offset-2'>
+                  <button type="button" class="btn btn-primary btn-update btn-add-card pull-left" disabled>Activate</button>
+               </div>
+               <div class='col-lg-4'>
+                  <button type="button" class="btn btn-danger btn-update btn-add-card pull-right">Edit Settings</button>
+               </div>
+            </div>
+          </div>
+       </div>
+       </div>
+        {% endfor %}
+
+
+    </div> <!-- End Plugins -->
+
+      </div><!-- End row -->
+    </div><!-- End container -->

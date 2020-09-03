@@ -1,0 +1,8 @@
+{
+  "_title": "VIP-Processing-Dashboard",
+  "_version": 1.0,
+  "_publisher": "WSC-FileShare",
+  "_description": "VIP-Processing-Dashboard",
+  "_category": "Addon",
+  "_shortcode": "vip_processing_dashboard frame_1_src='https://cloudjump.me' frame_2_src='http://vnc-server/vnc.html?password=vncpassword'"
+}

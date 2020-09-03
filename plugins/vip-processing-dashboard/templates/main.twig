@@ -1,0 +1,94 @@
+
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+  <body>
+
+      <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4">
+              <iframe height=700 width=100% src="{{frame_1_src}}"></iframe>
+            </div>
+            <div class="col-md-8">
+              <iframe height=700 width=100% src="{{frame_2_src}}"></iframe>
+            </div>
+          </div>
+
+        <div class="row">
+
+
+          <main role="main" class="col-md-12">
+            {% if link %}
+                 <div class="alert alert-success" role="alert">
+                   New Post LINK : {{link|raw}}
+                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                   </button>
+                 </div>
+                 <?php
+            {% endif %}
+            <div class="col-md-12">
+            </br>
+            </br>
+
+            <form method="post" action="">
+
+
+
+
+            <table class="col-md-12">
+            <tr>
+            <th>Post Title:</th>
+            <td><input name="title" type="text" value="" style="width:100%;"></td>
+            </tr>
+            <tr>
+            <th>Download URL:</th>
+            <td><input name="url" type="text" value="" style="width:100%;"></td>
+            </tr>
+            <tr>
+            <th>Trailer URL:</th>
+            <td><input name="turl" type="text" value="" style="width:100%;"></td>
+            </tr>
+            <tr>
+            <th>Post Body:</th>
+            <td><textarea name="ad" rows="10" cols="50"></textarea></td>
+            </tr>
+            <tr>
+            <th>KeyWords:</th>
+            <td><input name="keywords" type="text" value="" style="width:100%;"></td>
+            </tr>
+            <th>Generate</th>
+            <td><input type="submit" name="submit"></td>
+            </tr>
+
+            </table>
+
+            </form>
+            </div>
+
+          </main>
+        </div>
+      </div>
+
+      <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+      <script src="../../assets/js/vendor/popper.min.js"></script>
+      <script src="../../dist/js/bootstrap.min.js"></script>
+
+      <!-- Icons -->
+      <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+      <script>
+        feather.replace()
+      </script>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</html>

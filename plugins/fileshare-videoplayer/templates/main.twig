@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>MediaElement</title>
+  <!-- MediaElement style -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/mediaelementplayer.css" />
+</head>
+
+<body>
+  <!-- MediaElement -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/mediaelement-and-player.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <video id="player" width="640" height="360"></video>
+</body>
+<script type="text/javascript">
+
+      var player = new MediaElementPlayer('player', {
+        features: ['playpause','progress','current','duration','tracks','volume','fullscreen'],
+        success: function(mediaElement, originalNode) {
+          console.log("Player initialised");
+
+          mediaElement.addEventListener('timeupdate', function (e) {
+          console.log('Start playing');
+
+
+
+          }, false);
+
+        }
+      });
+
+
+
+        player.setSrc("{{video}}");
+        player.setPoster("{{poster}}");
+        player.setCurrentTime({{start_pos}});
+
+        //{{preview_only}}
+
+        {% if preview_only  %}
+           playTimeout = setTimeout(function() {
+
+              player.pause();
+              player.setSrc("{{advertisment}}");
+              player.load();
+              player.play();
+              clearTimeout(this);
+            }, 10000); // 30 seconds in ms
+        {% endif %}
+
+
+
+
+</script>
+
+</html>

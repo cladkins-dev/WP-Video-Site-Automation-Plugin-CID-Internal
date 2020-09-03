@@ -1,0 +1,8 @@
+{
+  "_title": "FileMediaPlayer",
+  "_version": 1.0,
+  "_publisher": "WSC-FileShare",
+  "_description": "FileSharePlayer",
+  "_category": "Addon",
+  "_shortcode": "fileshare_videoplayer video='https://myvideo.mp4' poster='https://myposter.png' start_pos='20' preview_only='true/false' advertisment='https://ad.mp4'"
+}
