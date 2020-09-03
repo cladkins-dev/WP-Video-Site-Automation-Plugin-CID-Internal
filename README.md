@@ -1,1 +1,3 @@
-docker run -i -v $(pwd):/app composer/composer install# WP-Video-Site-Automation-Plugin-CID-Internal
+#To Install PHP Components via Composer
+
+docker run -i -v $(pwd):/app composer/composer install
